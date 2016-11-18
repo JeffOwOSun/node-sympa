@@ -64,9 +64,9 @@ SYMPA.prototype.getList = function (mailingList) {
   return rp({
     uri: this.sympaRoot+'/dump/'+mailingList+'/light',
   })
-  //.then(function(body) {
-  //  return body.split('\n');
-  //});
+  .then(function(body) {
+    return body.split('\n');
+  });
 }
 
 var sympa = new SYMPA(settings.sympaRoot);

@@ -1,5 +1,5 @@
 var j = require("request").jar();
-var rp = require("request-promise").defaults({jar: j});
+var rp = require("request-promise").defaults({jar: j, followAllRedirects: true});
 var cheerio = require("cheerio");
 var settings = require('./settings.js');
 
@@ -54,7 +54,7 @@ SYMPA.prototype.setup = function (username, password, casRoot) {
     });
   })
   .then(function(response) {
-    console.log('success', response);
+    //console.log('success', response);
   })
   .catch(function(err) {
     throw err;
@@ -71,9 +71,9 @@ SYMPA.prototype.getList = function (mailingList) {
 
 var sympa = new SYMPA(settings.sympaRoot);
 sympa.setup(settings.username, settings.password, settings.casRoot)
-//.then(function() {
-//  return sympa.getList('jowos-custom-list');
-//})
+.then(function() {
+  return sympa.getList('jowos-custom-list');
+})
 .then(function(res) {
   console.log(res);
 })

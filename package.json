@@ -1,0 +1,24 @@
+{
+  "name": "node-sympa",
+  "version": "1.0.0",
+  "description": "a utility to manipulate sympa without using its api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeffOwOSun/node-sympa.git"
+  },
+  "author": "Yushi Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JeffOwOSun/node-sympa/issues"
+  },
+  "homepage": "https://github.com/JeffOwOSun/node-sympa#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.78.0",
+    "request-promise": "^4.1.1"
+  }
+}
